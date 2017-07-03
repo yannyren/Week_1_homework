@@ -54,24 +54,19 @@ end
 
 # test not solved
 def remove_pet_by_name(pet_shop, pet_name)
-  for pet in pet_shop[:pets]
-    pets_shop[:pets].delete(pet) if pet[:name] == pet_name
+  for pet in pet_shop[:pets] 
+    pet_shop[:pets].delete(pet) if pet[:name] == pet_name
   end
 end 
 
-# def add_pet_to_stock(pet_shop, new_pet)
-#   for pet in pet_shop[:pets]
-#     pet_shop[:pets] << new_pet if pet != new_pet 
-#   end
-#   stock_count = pet_shop[:pets].length
-#   return stock_count
-# end
+def add_pet_to_stock(pet_shop, new_pet)
+  pet_shop[:pets] << new_pet
+end 
 
-# def customer_pet_count(customer, customer_name)
-#   return 
-# end 
+def customer_pet_count(customer)
+customer[:pets].count
+end 
 
-# def add_pet_to_customer(customer, customer_name, new_pet)
-
-
-# end
+def add_pet_to_customer(customer, new_pet)
+  customer[:pets] << new_pet
+end
